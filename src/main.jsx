@@ -11,6 +11,8 @@ import Foods from './component/Foods';
 import MealDetails from './component/MealDetails';
 import About from './component/About';
 import Contact from './component/Contact';
+import LoadingSpinner from './component/LoadingSpinner';
+import Error from './component/error';
 
 
 const router = createBrowserRouter([
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path:'/contact',
         element: <Contact></Contact>
+      },
+      {
+        path:'loader',
+        element: <LoadingSpinner></LoadingSpinner>
+      },
+      {
+        path: '*',
+        element: <Error></Error>
       }
     ]
   },
